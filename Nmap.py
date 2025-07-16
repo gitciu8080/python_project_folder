@@ -1,58 +1,58 @@
 import subprocess,json
 from lxml import etree
 class Nmap:
-    # 手动选择网卡
-    def select_ipconfig():
-        shell=['ip','-j','addr']
-        run=subprocess.run(shell,capture_output=True, text=True).stdout
-        result=json.loads(run)
-        result_list=[]
-        for result in result:
-            ip=result['addr_info'][0]
-            muban={'Net_name':result['ifname'],'ip':ip['local'],'perfixlen':ip['prefixlen']}
-            result_list.append(muban)
-        for index, ip in enumerate(result_list, 1):  # 从1开始编号
-            print(f"{index}. {ip['Net_name']} - {ip['ip']}")
+    # # 手动选择网卡
+    # def select_ipconfig():
+    #     shell=['ip','-j','addr']
+    #     run=subprocess.run(shell,capture_output=True, text=True).stdout
+    #     result=json.loads(run)
+    #     result_list=[]
+    #     for result in result:
+    #         ip=result['addr_info'][0]
+    #         muban={'Net_name':result['ifname'],'ip':ip['local'],'perfixlen':ip['prefixlen']}
+    #         result_list.append(muban)
+    #     for index, ip in enumerate(result_list, 1):  # 从1开始编号
+    #         print(f"{index}. {ip['Net_name']} - {ip['ip']}")
         
-        try:
-            select = int(input('输入数字：')) - 1  # 转换为0-based索引
-            if select < 0 or select >= len(result_list):
-                raise ValueError("输入超出范围")
-            return result_list[select]
-        except ValueError:
-            print('falied')
-    #获取配置
-    def get_Network_Cards():
-        shell=['ip','-j','addr']
-        run=subprocess.run(shell,capture_output=True, text=True).stdout
-        result=json.loads(run)
-        result_list=[]
-        for result in result:
-            ip=result['addr_info'][0]
-            muban={'Net_name':result['ifname'],'ip':ip['local'],'perfixlen':ip['prefixlen']}
-            result_list.append(muban)
-        return result_list
-    # 获取网卡信息
-    def select_network_card(Card_name):
-        ifconfig=Nmap.get_Network_Cards()
-        for ifconfig in ifconfig:
-            try:
-                if ifconfig['Net_name']==Card_name:
-                    return ifconfig
-            except:
-                pass
-     # 格式化IP地址           
-    def format_ip(network_card_info):
-        ip=network_card_info['ip']
-        ip_parts=ip.split('.')
-        ip_parts[-1]='0'
-        network_card_info['ip']='.'.join(ip_parts)
-        ip=f'{network_card_info['ip']}/{network_card_info['perfixlen']}'
-        return ip
-    #使用ethX获取IP
-    def format_ip_card_name(Card_name):
-        network_card_info=Nmap.select_network_card(Card_name)
-        return Nmap.format_ip(network_card_info)
+    #     try:
+    #         select = int(input('输入数字：')) - 1  # 转换为0-based索引
+    #         if select < 0 or select >= len(result_list):
+    #             raise ValueError("输入超出范围")
+    #         return result_list[select]
+    #     except ValueError:
+    #         print('falied')
+    # #获取配置
+    # def get_Network_Cards():
+    #     shell=['ip','-j','addr']
+    #     run=subprocess.run(shell,capture_output=True, text=True).stdout
+    #     result=json.loads(run)
+    #     result_list=[]
+    #     for result in result:
+    #         ip=result['addr_info'][0]
+    #         muban={'Net_name':result['ifname'],'ip':ip['local'],'perfixlen':ip['prefixlen']}
+    #         result_list.append(muban)
+    #     return result_list
+    # # 获取网卡信息
+    # def select_network_card(Card_name):
+    #     ifconfig=Nmap.get_Network_Cards()
+    #     for ifconfig in ifconfig:
+    #         try:
+    #             if ifconfig['Net_name']==Card_name:
+    #                 return ifconfig
+    #         except:
+    #             pass
+    #  # 格式化IP地址           
+    # def format_ip(network_card_info):
+    #     ip=network_card_info['ip']
+    #     ip_parts=ip.split('.')
+    #     ip_parts[-1]='0'
+    #     network_card_info['ip']='.'.join(ip_parts)
+    #     ip=f'{network_card_info['ip']}/{network_card_info['perfixlen']}'
+    #     return ip
+    # #使用ethX获取IP
+    # def format_ip_card_name(Card_name):
+    #     network_card_info=Nmap.select_network_card(Card_name)
+    #     return Nmap.format_ip(network_card_info)
     #格式化XML
     # def xml_to_list():
     #     xml=etree.parse('result.xml')
