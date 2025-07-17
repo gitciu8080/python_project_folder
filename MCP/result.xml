@@ -1,247 +1,398 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.95 scan initiated Wed Jul 16 04:54:17 2025 as: /usr/lib/nmap/nmap -&#45;privileged -sS -T4 -p 21,22,23,25,53,80,110,135,139,143,443,445,3306,3389,8080 -sV -O -&#45;version-intensity 5 -oX MCP/result.xml 192.168.19.0/24 -->
-<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -sS -T4 -p 21,22,23,25,53,80,110,135,139,143,443,445,3306,3389,8080 -sV -O -&#45;version-intensity 5 -oX MCP/result.xml 192.168.19.0/24" start="1752656057" startstr="Wed Jul 16 04:54:17 2025" version="7.95" xmloutputversion="1.05">
-<scaninfo type="syn" protocol="tcp" numservices="15" services="21-23,25,53,80,110,135,139,143,443,445,3306,3389,8080"/>
-<verbose level="0"/>
-<debugging level="0"/>
-<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.2" addrtype="ipv4"/>
-<address addr="00:50:56:EA:FB:41" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-</hosthint>
-<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.1" addrtype="ipv4"/>
-<address addr="00:50:56:C0:00:08" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-</hosthint>
-<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.134" addrtype="ipv4"/>
-<address addr="00:0C:29:4B:01:59" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-</hosthint>
-<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.254" addrtype="ipv4"/>
-<address addr="00:50:56:E5:E7:CF" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-</hosthint>
-<host starttime="1752656059" endtime="1752656081"><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.1" addrtype="ipv4"/>
-<address addr="00:50:56:C0:00:08" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-<ports><port protocol="tcp" portid="21"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
-<port protocol="tcp" portid="23"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="telnet" method="table" conf="3"/></port>
-<port protocol="tcp" portid="25"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="smtp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="53"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
-<port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
-<port protocol="tcp" portid="110"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="pop3" method="table" conf="3"/></port>
-<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
-<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
-<port protocol="tcp" portid="143"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="imap" method="table" conf="3"/></port>
-<port protocol="tcp" portid="443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
-<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3306"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3389"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ms-wbt-server" method="table" conf="3"/></port>
-<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
-</ports>
-<os><portused state="open" proto="tcp" portid="135"/>
-<osmatch name="Microsoft Windows 11 21H2" accuracy="96" line="75497">
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="11" accuracy="96"><cpe>cpe:/o:microsoft:windows_11</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows 10" accuracy="91" line="74394">
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="91"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows 10 1607" accuracy="91" line="74770">
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="91"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows Server 2022" accuracy="90" line="82075">
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2022" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2022</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows Server 2008 SP1" accuracy="88" line="80603">
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="88" line="84956">
-<osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="88"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows Embedded Standard 7" accuracy="87" line="83594">
-<osclass type="specialized" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="87"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows 10 1511 - 1607" accuracy="86" line="74608">
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="86"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
-</osmatch>
-</os>
-<uptime seconds="629379" lastboot="Tue Jul  8 22:05:02 2025"/>
-<distance value="1"/>
-<tcpsequence index="262" difficulty="Good luck!" values="F02D3D2D,132150,6DA4CD78,71873008,3F356945,EB0CE6AF"/>
-<ipidsequence class="Incremental" values="56FF,5700,5701,5702,5703,5704"/>
-<tcptssequence class="1000HZ" values="25838904,25838969,258389CD,25838A33,25838A99,25838AFD"/>
-<times srtt="1532" rttvar="1744" to="100000"/>
-</host>
-<host starttime="1752656059" endtime="1752656081"><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.2" addrtype="ipv4"/>
-<address addr="00:50:56:EA:FB:41" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-<ports><port protocol="tcp" portid="21"><state state="closed" reason="reset" reason_ttl="128"/><service name="ftp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="22"><state state="closed" reason="reset" reason_ttl="128"/><service name="ssh" method="table" conf="3"/></port>
-<port protocol="tcp" portid="23"><state state="closed" reason="reset" reason_ttl="128"/><service name="telnet" method="table" conf="3"/></port>
-<port protocol="tcp" portid="25"><state state="closed" reason="reset" reason_ttl="128"/><service name="smtp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="domain" extrainfo="unknown banner: Why query me?Your IP had been logged!" method="probed" conf="10"/></port>
-<port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="128"/><service name="http" method="table" conf="3"/></port>
-<port protocol="tcp" portid="110"><state state="closed" reason="reset" reason_ttl="128"/><service name="pop3" method="table" conf="3"/></port>
-<port protocol="tcp" portid="135"><state state="closed" reason="reset" reason_ttl="128"/><service name="msrpc" method="table" conf="3"/></port>
-<port protocol="tcp" portid="139"><state state="closed" reason="reset" reason_ttl="128"/><service name="netbios-ssn" method="table" conf="3"/></port>
-<port protocol="tcp" portid="143"><state state="closed" reason="reset" reason_ttl="128"/><service name="imap" method="table" conf="3"/></port>
-<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="128"/><service name="https" method="table" conf="3"/></port>
-<port protocol="tcp" portid="445"><state state="closed" reason="reset" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="128"/><service name="mysql" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3389"><state state="closed" reason="reset" reason_ttl="128"/><service name="ms-wbt-server" method="table" conf="3"/></port>
-<port protocol="tcp" portid="8080"><state state="closed" reason="reset" reason_ttl="128"/><service name="http-proxy" method="table" conf="3"/></port>
-</ports>
-<os><portused state="open" proto="tcp" portid="53"/>
-<portused state="closed" proto="tcp" portid="21"/>
-<osmatch name="VMware Player virtual NAT device" accuracy="98" line="111357">
-<osclass type="specialized" vendor="VMware" osfamily="Player" accuracy="98"><cpe>cpe:/a:vmware:player</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012" accuracy="93" line="90937">
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="93"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="93"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
-</osmatch>
-<osmatch name="DD-WRT v24-sp2 (Linux 2.4.37)" accuracy="91" line="48392">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.4.37</cpe></osclass>
-</osmatch>
-<osmatch name="Microsoft Windows XP SP3" accuracy="91" line="90642">
-<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="91"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
-</osmatch>
-<osmatch name="Actiontec MI424WR-GEN3I WAP" accuracy="91" line="1307">
-<osclass type="WAP" vendor="Actiontec" osfamily="embedded" accuracy="91"><cpe>cpe:/h:actiontec:mi424wr-gen3i</cpe></osclass>
-<osclass type="WAP" vendor="Linux" osfamily="Linux" accuracy="91"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
-</osmatch>
-<osmatch name="DVTel DVT-9540DW network camera" accuracy="89" line="25230">
-<osclass type="webcam" vendor="DVTel" osfamily="embedded" accuracy="89"/>
-</osmatch>
-<osmatch name="Linux 3.2" accuracy="89" line="67741">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
-</osmatch>
-<osmatch name="Linux 4.4" accuracy="89" line="70812">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
-</osmatch>
-<osmatch name="BlueArc Titan 2100 NAS device" accuracy="88" line="11771">
-<osclass type="storage-misc" vendor="BlueArc" osfamily="embedded" accuracy="88"><cpe>cpe:/h:bluearc:titan_2100</cpe></osclass>
-</osmatch>
-</os>
-<distance value="1"/>
-<tcpsequence index="260" difficulty="Good luck!" values="59403AEE,6120ECB,46263BB3,17A45FB6,7EBF5B1A,7C160FA7"/>
-<ipidsequence class="Incremental" values="5FE8,5FEC,5FF0,5FF1,5FF2,5FF3"/>
-<tcptssequence class="none returned (unsupported)"/>
-<times srtt="3554" rttvar="5123" to="100000"/>
-</host>
-<host starttime="1752656059" endtime="1752656081"><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.134" addrtype="ipv4"/>
-<address addr="00:0C:29:4B:01:59" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="vsftpd" version="2.3.4" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.3.4</cpe></service></port>
-<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="4.7p1 Debian 8ubuntu1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
-<port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="telnet" product="Linux telnetd" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
-<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtp" product="Postfix smtpd" hostname=" metasploitable.localdomain" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service></port>
-<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="domain" product="ISC BIND" version="9.4.2" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.4.2</cpe></service></port>
-<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.8" extrainfo="(Ubuntu) DAV/2" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.8</cpe></service></port>
-<port protocol="tcp" portid="110"><state state="closed" reason="reset" reason_ttl="64"/><service name="pop3" method="table" conf="3"/></port>
-<port protocol="tcp" portid="135"><state state="closed" reason="reset" reason_ttl="64"/><service name="msrpc" method="table" conf="3"/></port>
-<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
-<port protocol="tcp" portid="143"><state state="closed" reason="reset" reason_ttl="64"/><service name="imap" method="table" conf="3"/></port>
-<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
-<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
-<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" version="5.0.51a-3ubuntu5" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.0.51a-3ubuntu5</cpe></service></port>
-<port protocol="tcp" portid="3389"><state state="closed" reason="reset" reason_ttl="64"/><service name="ms-wbt-server" method="table" conf="3"/></port>
-<port protocol="tcp" portid="8080"><state state="closed" reason="reset" reason_ttl="64"/><service name="http-proxy" method="table" conf="3"/></port>
-</ports>
-<os><portused state="open" proto="tcp" portid="21"/>
-<portused state="closed" proto="tcp" portid="110"/>
-<portused state="closed" proto="udp" portid="39852"/>
-<osmatch name="Linux 2.6.9 - 2.6.33" accuracy="100" line="62704">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
-</osmatch>
-</os>
-<uptime seconds="29754" lastboot="Tue Jul 15 20:38:47 2025"/>
-<distance value="1"/>
-<tcpsequence index="198" difficulty="Good luck!" values="521BA265,51E421AA,52881CD9,522F66F7,5272F0A8,52E67627"/>
-<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
-<tcptssequence class="100HZ" values="2D651C,2D6526,2D6530,2D653A,2D6544,2D654E"/>
-<times srtt="299" rttvar="55" to="100000"/>
-</host>
-<host starttime="1752656059" endtime="1752656081"><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.254" addrtype="ipv4"/>
-<address addr="00:50:56:E5:E7:CF" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-<ports><port protocol="tcp" portid="21"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ftp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="22"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ssh" method="table" conf="3"/></port>
-<port protocol="tcp" portid="23"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="telnet" method="table" conf="3"/></port>
-<port protocol="tcp" portid="25"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="smtp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="53"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
-<port protocol="tcp" portid="80"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http" method="table" conf="3"/></port>
-<port protocol="tcp" portid="110"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="pop3" method="table" conf="3"/></port>
-<port protocol="tcp" portid="135"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
-<port protocol="tcp" portid="139"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
-<port protocol="tcp" portid="143"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="imap" method="table" conf="3"/></port>
-<port protocol="tcp" portid="443"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="https" method="table" conf="3"/></port>
-<port protocol="tcp" portid="445"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3306"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="mysql" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3389"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ms-wbt-server" method="table" conf="3"/></port>
-<port protocol="tcp" portid="8080"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="http-proxy" method="table" conf="3"/></port>
-</ports>
-<os></os>
-<distance value="1"/>
-<times srtt="112" rttvar="2151" to="100000"/>
-</host>
-<host starttime="1752656081" endtime="1752656088"><status state="up" reason="localhost-response" reason_ttl="0"/>
-<address addr="192.168.19.133" addrtype="ipv4"/>
-<hostnames>
-</hostnames>
-<ports><port protocol="tcp" portid="21"><state state="closed" reason="reset" reason_ttl="64"/><service name="ftp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 5" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
-<port protocol="tcp" portid="23"><state state="closed" reason="reset" reason_ttl="64"/><service name="telnet" method="table" conf="3"/></port>
-<port protocol="tcp" portid="25"><state state="closed" reason="reset" reason_ttl="64"/><service name="smtp" method="table" conf="3"/></port>
-<port protocol="tcp" portid="53"><state state="closed" reason="reset" reason_ttl="64"/><service name="domain" method="table" conf="3"/></port>
-<port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
-<port protocol="tcp" portid="110"><state state="closed" reason="reset" reason_ttl="64"/><service name="pop3" method="table" conf="3"/></port>
-<port protocol="tcp" portid="135"><state state="closed" reason="reset" reason_ttl="64"/><service name="msrpc" method="table" conf="3"/></port>
-<port protocol="tcp" portid="139"><state state="closed" reason="reset" reason_ttl="64"/><service name="netbios-ssn" method="table" conf="3"/></port>
-<port protocol="tcp" portid="143"><state state="closed" reason="reset" reason_ttl="64"/><service name="imap" method="table" conf="3"/></port>
-<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
-<port protocol="tcp" portid="445"><state state="closed" reason="reset" reason_ttl="64"/><service name="microsoft-ds" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3306"><state state="closed" reason="reset" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
-<port protocol="tcp" portid="3389"><state state="closed" reason="reset" reason_ttl="64"/><service name="ms-wbt-server" method="table" conf="3"/></port>
-<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tornado httpd" version="6.5.1" method="probed" conf="10"><cpe>cpe:/a:tornadoweb:tornado:6.5.1</cpe></service></port>
-</ports>
-<os><portused state="open" proto="tcp" portid="22"/>
-<portused state="closed" proto="tcp" portid="21"/>
-<portused state="closed" proto="udp" portid="43514"/>
-<osmatch name="Linux 2.6.32" accuracy="100" line="59030">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
-</osmatch>
-<osmatch name="Linux 5.0 - 6.2" accuracy="100" line="71749">
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
-<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:6</cpe></osclass>
-</osmatch>
-</os>
-<uptime seconds="1700092" lastboot="Thu Jun 26 12:39:56 2025"/>
-<distance value="0"/>
-<tcpsequence index="258" difficulty="Good luck!" values="40D10F67,B58051D1,57FC279B,B39EFF2C,82F9203C,7AAF1A4"/>
-<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
-<tcptssequence class="1000HZ" values="655557FA,6555585E,655558C3,65555927,6555598B,655559EF"/>
-<times srtt="61" rttvar="10" to="100000"/>
-</host>
-<runstats><finished time="1752656088" timestr="Wed Jul 16 04:54:48 2025" summary="Nmap done at Wed Jul 16 04:54:48 2025; 256 IP addresses (5 hosts up) scanned in 31.17 seconds" elapsed="31.17" exit="success"/><hosts up="5" down="251" total="256"/>
-</runstats>
+<!-- Nmap 7.95 scan initiated Thu Jul 17 02:34:45 2025 as: /usr/lib/nmap/nmap -&#45;privileged -A -T4 -p- -&#45;script http-title,http-enum,http-headers,http-methods,smb-os-discovery,smb-enum-shares,smb-enum-users,ftp-anon -oX MCP/result.xml 192.168.19.0/24 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -A -T4 -p- -&#45;script http-title,http-enum,http-headers,http-methods,smb-os-discovery,smb-enum-shares,smb-enum-users,ftp-anon -oX MCP/result.xml 192.168.19.0/24" start="1752734085" startstr="Thu Jul 17 02:34:45 2025" version="7.95" xmloutputversion="1.05">
+    <scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+    <verbose level="0"/>
+    <debugging level="0"/>
+    <hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.19.1" addrtype="ipv4"/>
+        <address addr="00:50:56:C0:00:08" addrtype="mac" vendor="VMware"/>
+        <hostnames>
+        </hostnames>
+    </hosthint>
+    <hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.19.2" addrtype="ipv4"/>
+        <address addr="00:50:56:EA:FB:41" addrtype="mac" vendor="VMware"/>
+        <hostnames>
+        </hostnames>
+    </hosthint>
+    <hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.19.134" addrtype="ipv4"/>
+        <address addr="00:0C:29:4B:01:59" addrtype="mac" vendor="VMware"/>
+        <hostnames>
+        </hostnames>
+    </hosthint>
+    <hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.19.254" addrtype="ipv4"/>
+        <address addr="00:50:56:E7:E4:99" addrtype="mac" vendor="VMware"/>
+        <hostnames>
+        </hostnames>
+    </hosthint>
+    <host starttime="1752734088" endtime="1752734356"><status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.19.1" addrtype="ipv4"/>
+        <address addr="00:50:56:C0:00:08" addrtype="mac" vendor="VMware"/>
+        <hostnames>
+        </hostnames>
+        <ports><extraports state="filtered" count="65526">
+                <extrareasons reason="no-response" count="65526" proto="tcp" ports="1-134,136-138,140-444,446-2178,2180-7679,7681-9992,9994-24472,24474-49153,49155-49669,49671-65535"/>
+            </extraports>
+            <port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+            <port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+            <port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
+            <port protocol="tcp" portid="2179"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="vmrdp" method="table" conf="3"/></port>
+            <port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="pando-pub" method="table" conf="3"/></port>
+            <port protocol="tcp" portid="9993"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="palace-2" servicefp="SF-Port9993-TCP:V=7.95%I=7%D=7/17%Time=687899F2%P=x86_64-pc-linux-gnu%r(GenericLines,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(GetRequest,70,&quot;HTTP/1\.1\x20401\x20Unauthorized\r\nContent-Length:\x202\r\nContent-Type:\x20application/json\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n{}&quot;)%r(HTTPOptions,70,&quot;HTTP/1\.1\x20401\x20Unauthorized\r\nContent-Length:\x202\r\nContent-Type:\x20application/json\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n{}&quot;)%r(RTSPRequest,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(Help,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(SSLSessionReq,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(TerminalServerCookie,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(TLSSessionReq,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(Kerberos,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(FourOhFourRequest,70,&quot;HTTP/1\.1\x20401\x20Unauthorized\r\nContent-Length:\x202\r\nContent-Type:\x20application/json\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n{}&quot;)%r(LPDString,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(LDAPSearchReq,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;)%r(SIPOptions,4D,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nKeep-Alive:\x20timeout=5,\x20max=5\r\n\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest, GetRequest, HTTPOptions: &#xa;    HTTP/1.1 401 Unauthorized&#xa;    Content-Length: 2&#xa;    Content-Type: application/json&#xa;    Keep-Alive: timeout=5, max=5&#xa;  GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, TLSSessionReq, TerminalServerCookie: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Length: 0&#xa;    Keep-Alive: timeout=5, max=5"><elem key="FourOhFourRequest, GetRequest, HTTPOptions">&#xa;    HTTP/1.1 401 Unauthorized&#xa;    Content-Length: 2&#xa;    Content-Type: application/json&#xa;    Keep-Alive: timeout=5, max=5</elem>
+                    <elem key="GenericLines, Help, Kerberos, LDAPSearchReq, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, TLSSessionReq, TerminalServerCookie">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Length: 0&#xa;    Keep-Alive: timeout=5, max=5</elem>
+                </script></port>
+            <port protocol="tcp" portid="24473"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+            <port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="unknown" servicefp="SF-Port49154-TCP:V=7.95%I=7%D=7/17%Time=687899EE%P=x86_64-pc-linux-gnu%r(NULL,28,&quot;\0\0\x12\x04\0\0\0\0\0\0\x03\x7f\xff\xff\xff\0\x04\0\x10\0\0\0\x06\0\0\x20\0\0\0\x04\x08\0\0\0\0\0\0\x0f\0\x01&quot;)%r(GenericLines,8F,&quot;\0\0\x12\x04\0\0\0\0\0\0\x03\x7f\xff\xff\xff\0\x04\0\x10\0\0\0\x06\0\0\x20\0\0\0\x04\x08\0\0\0\0\0\0\x0f\0\x01\0\0\^\x07\0\0\0\0\0\x7f\xff\xff\xff\0\0\0\x01HTTP/2\x20client\x20preface\x20string\x20missing\x20or\x20corrupt\.\x20Hex\x20dump\x20for\x20received\x20bytes:\x200d0a0d0a&quot;)%r(GetRequest,5C,&quot;\0\0\x12\x04\0\0\0\0\0\0\x03\x7f\xff\xff\xff\0\x04\0\x10\0\0\0\x06\0\0\x20\0\0\0\x04\x08\0\0\0\0\0\0\x0f\0\x01\0\0\+\x07\0\0\0\0\0\x7f\xff\xff\xff\0\0\0\x01Unexpected\x20HTTP/1\.x\x20request:\x20GET\x20/\x20&quot;)%r(HTTPOptions,60,&quot;\0\0\x12\x04\0\0\0\0\0\0\x03\x7f\xff\xff\xff\0\x04\0\x10\0\0\0\x06\0\0\x20\0\0\0\x04\x08\0\0\0\0\0\0\x0f\0\x01\0\0/\x07\0\0\0\0\0\x7f\xff\xff\xff\0\0\0\x01Unexpected\x20HTTP/1\.x\x20request:\x20OPTIONS\x20/\x20&quot;)%r(RTSPRequest,B3,&quot;\0\0\x12\x04\0\0\0\0\0\0\x03\x7f\xff\xff\xff\0\x04\0\x10\0\0\0\x06\0\0\x20\0\0\0\x04\x08\0\0\0\0\0\0\x0f\0\x01\0\0\x82\x07\0\0\0\0\0\x7f\xff\xff\xff\0\0\0\x01HTTP/2\x20client\x20preface\x20string\x20missing\x20or\x20corrupt\.\x20Hex\x20dump\x20for\x20received\x20bytes:\x204f5054494f4e53202f20525453502f312e300d0a0d0a&quot;)%r(RPCCheck,B7,&quot;\0\0\x12\x04\0\0\0\0\0\0\x03\x7f\xff\xff\xff\0\x04\0\x10\0\0\0\x06\0\0\x20\0\0\0\x04\x08\0\0\0\0\0\0\x0f\0\x01\0\0\x86\x07\0\0\0\0\0\x7f\xff\xff\xff\0\0\0\x01HTTP/2\x20client\x20preface\x20string\x20missing\x20or\x20corrupt\.\x20Hex\x20dump\x20for\x20received\x20bytes:\x208000002872fe1d130000000000000002000186a00001977c&quot;)%r(DNSVersionBindReqTCP,B7,&quot;\0\0\x12\x04\0\0\0\0\0\0\x03\x7f\xff\xff\xff\0\x04\0\x10\0\0\0\x06\0\0\x20\0\0\0\x04\x08\0\0\0\0\0\0\x0f\0\x01\0\0\x86\x07\0\0\0\0\0\x7f\xff\xff\xff\0\0\0\x01HTTP/2\x20client\x20preface\x20string\x20missing\x20or\x20corrupt\.\x20Hex\x20dump\x20for\x20received\x20bytes:\x20001e0006010000010000000000000776657273696f6e0462&quot;)%r(DNSStatusRequestTCP,A3,&quot;\0\0\x12\x04\0\0\0\0\0\0\x03\x7f\xff\xff\xff\0\x04\0\x10\0\0\0\x06\0\0\x20\0\0\0\x04\x08\0\0\0\0\0\0\x0f\0\x01\0\0r\x07\0\0\0\0\0\x7f\xff\xff\xff\0\0\0\x01HTTP/2\x20client\x20preface\x20string\x20missing\x20or\x20corrupt\.\x20Hex\x20dump\x20for\x20received\x20bytes:\x20000c000010000000000000000000&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP: &#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 000c000010000000000000000000&#xa;  DNSVersionBindReqTCP: &#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 001e0006010000010000000000000776657273696f6e0462&#xa;  GenericLines: &#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 0d0a0d0a&#xa;  GetRequest: &#xa;    Unexpected HTTP/1.x request: GET /&#xa;  HTTPOptions: &#xa;    Unexpected HTTP/1.x request: OPTIONS /&#xa;  RPCCheck: &#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 8000002872fe1d130000000000000002000186a00001977c&#xa;  RTSPRequest: &#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 4f5054494f4e53202f20525453502f312e300d0a0d0a"><elem key="DNSStatusRequestTCP">&#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 000c000010000000000000000000</elem>
+                    <elem key="DNSVersionBindReqTCP">&#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 001e0006010000010000000000000776657273696f6e0462</elem>
+                    <elem key="GenericLines">&#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 0d0a0d0a</elem>
+                    <elem key="GetRequest">&#xa;    Unexpected HTTP/1.x request: GET /</elem>
+                    <elem key="HTTPOptions">&#xa;    Unexpected HTTP/1.x request: OPTIONS /</elem>
+                    <elem key="RPCCheck">&#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 8000002872fe1d130000000000000002000186a00001977c</elem>
+                    <elem key="RTSPRequest">&#xa;    HTTP/2 client preface string missing or corrupt. Hex dump for received bytes: 4f5054494f4e53202f20525453502f312e300d0a0d0a</elem>
+                </script></port>
+            <port protocol="tcp" portid="49670"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+        </ports>
+        <os><portused state="open" proto="tcp" portid="135"/>
+            <osmatch name="Microsoft Windows 11 21H2" accuracy="96" line="75497">
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="11" accuracy="96"><cpe>cpe:/o:microsoft:windows_11</cpe></osclass>
+            </osmatch>
+            <osmatch name="Microsoft Windows 10" accuracy="91" line="74394">
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="91"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+            </osmatch>
+            <osmatch name="Microsoft Windows 10 1607" accuracy="91" line="74770">
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="91"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+            </osmatch>
+            <osmatch name="Microsoft Windows Server 2022" accuracy="90" line="82075">
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2022" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2022</cpe></osclass>
+            </osmatch>
+            <osmatch name="Microsoft Windows Server 2008 SP1" accuracy="88" line="80603">
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
+            </osmatch>
+            <osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="86" line="84956">
+                <osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="86"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+            </osmatch>
+            <osmatch name="Microsoft Windows 10 1511 - 1607" accuracy="86" line="74608">
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="86"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+            </osmatch>
+        </os>
+        <uptime seconds="2945" lastboot="Thu Jul 17 01:50:11 2025"/>
+        <distance value="1"/>
+        <tcpsequence index="263" difficulty="Good luck!" values="B0C0B557,31689402,402C9BD8,747431D5,4743620B,D9EDE829"/>
+        <ipidsequence class="Incremental" values="D145,D146,D147,D148,D149,D14A"/>
+        <tcptssequence class="1000HZ" values="2CC8C7,2CC92F,2CC995,2CC9FB,2CCA62,2CCACA"/>
+        <trace>
+            <hop ttl="1" ipaddr="192.168.19.1" rtt="0.49"/>
+        </trace>
+        <times srtt="486" rttvar="79" to="100000"/>
+    </host>
+    <host starttime="1752734088" endtime="1752734355"><status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.19.2" addrtype="ipv4"/>
+        <address addr="00:50:56:EA:FB:41" addrtype="mac" vendor="VMware"/>
+        <hostnames>
+        </hostnames>
+        <ports><extraports state="closed" count="65534">
+                <extrareasons reason="reset" count="65534" proto="tcp" ports="1-52,54-65535"/>
+            </extraports>
+            <port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="domain" extrainfo="unknown banner: Why query me?Your IP had been logged!" servicefp="SF-Port53-TCP:V=7.95%I=7%D=7/17%Time=687899F3%P=x86_64-pc-linux-gnu%r(DNSVersionBindReqTCP,52,&quot;\0P\0\x06\x85\0\0\x01\0\x01\0\0\0\0\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0&amp;%Why\x20query\x20me\?Your\x20IP\x20had\x20been\x20logged!&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  DNSVersionBindReqTCP: &#xa;    version&#xa;    bind&#xa;    &amp;%Why query me?Your IP had been logged!"><elem key="DNSVersionBindReqTCP">&#xa;    version&#xa;    bind&#xa;    &amp;%Why query me?Your IP had been logged!</elem>
+                </script></port>
+        </ports>
+        <os><portused state="open" proto="tcp" portid="53"/>
+            <portused state="closed" proto="tcp" portid="1"/>
+            <osmatch name="VMware Player virtual NAT device" accuracy="99" line="111357">
+                <osclass type="specialized" vendor="VMware" osfamily="Player" accuracy="99"><cpe>cpe:/a:vmware:player</cpe></osclass>
+            </osmatch>
+            <osmatch name="Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012" accuracy="93" line="90937">
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="93"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="93"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+            </osmatch>
+            <osmatch name="Microsoft Windows XP SP3" accuracy="91" line="90642">
+                <osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="91"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+            </osmatch>
+            <osmatch name="DD-WRT v24-sp2 (Linux 2.4.37)" accuracy="91" line="48392">
+                <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.4.37</cpe></osclass>
+            </osmatch>
+            <osmatch name="Actiontec MI424WR-GEN3I WAP" accuracy="91" line="1307">
+                <osclass type="WAP" vendor="Actiontec" osfamily="embedded" accuracy="91"><cpe>cpe:/h:actiontec:mi424wr-gen3i</cpe></osclass>
+                <osclass type="WAP" vendor="Linux" osfamily="Linux" accuracy="91"><cpe>cpe:/o:linux:linux_kernel</cpe></osclass>
+            </osmatch>
+            <osmatch name="DVTel DVT-9540DW network camera" accuracy="89" line="25230">
+                <osclass type="webcam" vendor="DVTel" osfamily="embedded" accuracy="89"/>
+            </osmatch>
+            <osmatch name="Linux 3.2" accuracy="89" line="67741">
+                <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+            </osmatch>
+            <osmatch name="Linux 4.4" accuracy="89" line="70812">
+                <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+            </osmatch>
+        </os>
+        <distance value="1"/>
+        <tcpsequence index="255" difficulty="Good luck!" values="4B264161,37985FAE,46E733BB,2F71C8E,209A2DEE,55B75A7F"/>
+        <ipidsequence class="Incremental" values="EF7A,EF7B,EF7C,EF7D,EF7E,EF7F"/>
+        <tcptssequence class="none returned (unsupported)"/>
+        <trace>
+            <hop ttl="1" ipaddr="192.168.19.2" rtt="1.53"/>
+        </trace>
+        <times srtt="1528" rttvar="1734" to="100000"/>
+    </host>
+    <host starttime="1752734088" endtime="1752734355"><status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.19.134" addrtype="ipv4"/>
+        <address addr="00:0C:29:4B:01:59" addrtype="mac" vendor="VMware"/>
+        <hostnames>
+        </hostnames>
+        <ports><extraports state="closed" count="65505">
+                <extrareasons reason="reset" count="65505" proto="tcp" ports="1-20,24,26-52,54-79,81-110,112-138,140-444,446-511,515-1098,1100-1523,1525-2048,2050-2120,2122-3305,3307-3631,3633-5431,5433-5899,5901-5999,6001-6666,6668-6696,6698-8008,8010-8179,8181-8786,8788-34895,34897-46601,46603-56369,56371-58756,58758-65535"/>
+            </extraports>
+            <port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="vsftpd" version="2.3.4" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.3.4</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)"/></port>
+            <port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="4.7p1 Debian 8ubuntu1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+            <port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="telnet" product="Linux telnetd" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+            <port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtp" product="Postfix smtpd" hostname=" metasploitable.localdomain" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service></port>
+            <port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="domain" product="ISC BIND" version="9.4.2" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.4.2</cpe></service></port>
+            <port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.8" extrainfo="(Ubuntu) DAV/2" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.8</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+                        <elem>GET</elem>
+                        <elem>HEAD</elem>
+                        <elem>POST</elem>
+                        <elem>OPTIONS</elem>
+                    </table>
+                </script><script id="http-title" output="Metasploitable2 - Linux"><elem key="title">Metasploitable2 - Linux</elem>
+                </script><script id="http-enum" output="&#xa;  /tikiwiki/: Tikiwiki&#xa;  /test/: Test page&#xa;  /phpinfo.php: Possible information file&#xa;  /phpMyAdmin/: phpMyAdmin&#xa;  /doc/: Potentially interesting directory w/ listing on &apos;apache/2.2.8 (ubuntu) dav/2&apos;&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;  /index/: Potentially interesting folder&#xa;"/><script id="http-server-header" output="Apache/2.2.8 (Ubuntu) DAV/2"><elem>Apache/2.2.8 (Ubuntu) DAV/2</elem>
+                </script><script id="http-headers" output="&#xa;  Date: Tue, 15 Jul 2025 13:20:48 GMT&#xa;  Server: Apache/2.2.8 (Ubuntu) DAV/2&#xa;  X-Powered-By: PHP/5.2.4-2ubuntu5.10&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/></port>
+            <port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2            111/tcp   rpcbind&#xa;  100000  2            111/udp   rpcbind&#xa;  100003  2,3,4       2049/tcp   nfs&#xa;  100003  2,3,4       2049/udp   nfs&#xa;  100005  1,2,3      34896/tcp   mountd&#xa;  100005  1,2,3      47981/udp   mountd&#xa;  100021  1,3,4      47250/udp   nlockmgr&#xa;  100021  1,3,4      58757/tcp   nlockmgr&#xa;  100024  1          56370/tcp   status&#xa;  100024  1          59227/udp   status&#xa;"><table key="100005">
+                        <table key="udp">
+                            <table key="version">
+                                <elem>1</elem>
+                                <elem>2</elem>
+                                <elem>3</elem>
+                            </table>
+                            <elem key="port">47981</elem>
+                        </table>
+                        <table key="tcp">
+                            <table key="version">
+                                <elem>1</elem>
+                                <elem>2</elem>
+                                <elem>3</elem>
+                            </table>
+                            <elem key="port">34896</elem>
+                        </table>
+                    </table>
+                    <table key="100003">
+                        <table key="udp">
+                            <table key="version">
+                                <elem>2</elem>
+                                <elem>3</elem>
+                                <elem>4</elem>
+                            </table>
+                            <elem key="port">2049</elem>
+                        </table>
+                        <table key="tcp">
+                            <table key="version">
+                                <elem>2</elem>
+                                <elem>3</elem>
+                                <elem>4</elem>
+                            </table>
+                            <elem key="port">2049</elem>
+                        </table>
+                    </table>
+                    <table key="100021">
+                        <table key="udp">
+                            <table key="version">
+                                <elem>1</elem>
+                                <elem>3</elem>
+                                <elem>4</elem>
+                            </table>
+                            <elem key="port">47250</elem>
+                        </table>
+                        <table key="tcp">
+                            <table key="version">
+                                <elem>1</elem>
+                                <elem>3</elem>
+                                <elem>4</elem>
+                            </table>
+                            <elem key="port">58757</elem>
+                        </table>
+                    </table>
+                    <table key="100024">
+                        <table key="udp">
+                            <table key="version">
+                                <elem>1</elem>
+                            </table>
+                            <elem key="port">59227</elem>
+                        </table>
+                        <table key="tcp">
+                            <table key="version">
+                                <elem>1</elem>
+                            </table>
+                            <elem key="port">56370</elem>
+                        </table>
+                    </table>
+                    <table key="100000">
+                        <table key="tcp">
+                            <table key="version">
+                                <elem>2</elem>
+                            </table>
+                            <elem key="port">111</elem>
+                        </table>
+                        <table key="udp">
+                            <table key="version">
+                                <elem>2</elem>
+                            </table>
+                            <elem key="port">111</elem>
+                        </table>
+                    </table>
+                </script></port>
+            <port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+            <port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.0.20-Debian" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+            <port protocol="tcp" portid="512"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="exec" product="netkit-rsh rexecd" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:netkit:netkit</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+            <port protocol="tcp" portid="513"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="login" product="OpenBSD or Solaris rlogind" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="514"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+            <port protocol="tcp" portid="1099"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="java-rmi" product="GNU Classpath grmiregistry" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="1524"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="bindshell" product="Metasploitable root shell" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="nfs" version="2-4" extrainfo="RPC #100003" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="2121"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="ProFTPD" version="1.3.1" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd:1.3.1</cpe></service></port>
+            <port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" version="5.0.51a-3ubuntu5" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.0.51a-3ubuntu5</cpe></service></port>
+            <port protocol="tcp" portid="3632"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="distccd" product="distccd" version="v1" extrainfo="(GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4)" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="5432"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="postgresql" product="PostgreSQL DB" version="8.3.0 - 8.3.7" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql:8.3</cpe></service></port>
+            <port protocol="tcp" portid="5900"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="vnc" product="VNC" extrainfo="protocol 3.3" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="6000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="X11" extrainfo="access denied" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="6667"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="irc" product="UnrealIRCd" hostname="irc.Metasploitable.LAN" method="probed" conf="10"><cpe>cpe:/a:unrealircd:unrealircd</cpe></service></port>
+            <port protocol="tcp" portid="6697"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="irc" product="UnrealIRCd" hostname="irc.Metasploitable.LAN" method="probed" conf="10"><cpe>cpe:/a:unrealircd:unrealircd</cpe></service></port>
+            <port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ajp13" product="Apache Jserv" extrainfo="Protocol v1.3" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="8180"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service><script id="http-server-header" output="Apache-Coyote/1.1"><elem>Apache-Coyote/1.1</elem>
+                </script><script id="http-headers" output="&#xa;  Server: Apache-Coyote/1.1&#xa;  Content-Type: text/html;charset=ISO-8859-1&#xa;  Date: Tue, 15 Jul 2025 13:20:48 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-title" output="Apache Tomcat/5.5"><elem key="title">Apache Tomcat/5.5</elem>
+                </script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+                        <elem>GET</elem>
+                        <elem>HEAD</elem>
+                        <elem>POST</elem>
+                        <elem>OPTIONS</elem>
+                    </table>
+                </script><script id="http-enum" output="&#xa;  /admin/: Possible admin folder&#xa;  /admin/index.html: Possible admin folder&#xa;  /admin/login.html: Possible admin folder&#xa;  /admin/admin.html: Possible admin folder&#xa;  /admin/account.html: Possible admin folder&#xa;  /admin/admin_login.html: Possible admin folder&#xa;  /admin/home.html: Possible admin folder&#xa;  /admin/admin-login.html: Possible admin folder&#xa;  /admin/adminLogin.html: Possible admin folder&#xa;  /admin/controlpanel.html: Possible admin folder&#xa;  /admin/cp.html: Possible admin folder&#xa;  /admin/index.jsp: Possible admin folder&#xa;  /admin/login.jsp: Possible admin folder&#xa;  /admin/admin.jsp: Possible admin folder&#xa;  /admin/home.jsp: Possible admin folder&#xa;  /admin/controlpanel.jsp: Possible admin folder&#xa;  /admin/admin-login.jsp: Possible admin folder&#xa;  /admin/cp.jsp: Possible admin folder&#xa;  /admin/account.jsp: Possible admin folder&#xa;  /admin/admin_login.jsp: Possible admin folder&#xa;  /admin/adminLogin.jsp: Possible admin folder&#xa;  /manager/html/upload: Apache Tomcat (401 Unauthorized)&#xa;  /manager/html: Apache Tomcat (401 Unauthorized)&#xa;  /admin/view/javascript/fckeditor/editor/filemanager/connectors/test.html: OpenCart/FCKeditor File upload&#xa;  /admin/includes/FCKeditor/editor/filemanager/upload/test.html: ASP Simple Blog / FCKeditor File Upload&#xa;  /admin/jscript/upload.html: Lizard Cart/Remote File upload&#xa;  /webdav/: Potentially interesting folder&#xa;"/></port>
+            <port protocol="tcp" portid="8787"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="drb" product="Ruby DRb RMI" extrainfo="Ruby 1.8; path /usr/lib/ruby/1.8/drb" method="probed" conf="10"><cpe>cpe:/a:ruby-lang:ruby:1.8</cpe></service></port>
+            <port protocol="tcp" portid="34896"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="46602"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="java-rmi" product="GNU Classpath grmiregistry" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="56370"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+            <port protocol="tcp" portid="58757"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="nlockmgr" version="1-4" extrainfo="RPC #100021" method="probed" conf="10"/></port>
+        </ports>
+        <os><portused state="open" proto="tcp" portid="21"/>
+            <portused state="closed" proto="tcp" portid="1"/>
+            <portused state="closed" proto="udp" portid="41177"/>
+            <osmatch name="Linux 2.6.9 - 2.6.33" accuracy="100" line="62704">
+                <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+            </osmatch>
+        </os>
+        <uptime seconds="39797" lastboot="Wed Jul 16 15:35:59 2025"/>
+        <distance value="1"/>
+        <tcpsequence index="203" difficulty="Good luck!" values="F4235C23,F38D6E55,F3D311B6,F3DBD457,F3C63CB7,F462C46E"/>
+        <ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+        <tcptssequence class="100HZ" values="3CB482,3CB48C,3CB497,3CB4A1,3CB4AB,3CB4B5"/>
+        <hostscript><script id="smb-enum-shares" output="&#xa;  account_used: &lt;blank&gt;&#xa;  \\192.168.19.134\ADMIN$: &#xa;    Type: STYPE_IPC&#xa;    Comment: IPC Service (metasploitable server (Samba 3.0.20-Debian))&#xa;    Users: 1&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\192.168.19.134\IPC$: &#xa;    Type: STYPE_IPC&#xa;    Comment: IPC Service (metasploitable server (Samba 3.0.20-Debian))&#xa;    Users: 1&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;  \\192.168.19.134\opt: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: &#xa;    Users: 1&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\192.168.19.134\print$: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Printer Drivers&#xa;    Users: 1&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\var\lib\samba\printers&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\192.168.19.134\tmp: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: oh noes!&#xa;    Users: 1&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE"><elem key="account_used">&lt;blank&gt;</elem>
+                <table key="\\192.168.19.134\ADMIN$">
+                    <elem key="Type">STYPE_IPC</elem>
+                    <elem key="Comment">IPC Service (metasploitable server (Samba 3.0.20-Debian))</elem>
+                    <elem key="Users">1</elem>
+                    <elem key="Max Users">&lt;unlimited&gt;</elem>
+                    <elem key="Path">C:\tmp</elem>
+                    <elem key="Anonymous access">&lt;none&gt;</elem>
+                </table>
+                <table key="\\192.168.19.134\IPC$">
+                    <elem key="Type">STYPE_IPC</elem>
+                    <elem key="Comment">IPC Service (metasploitable server (Samba 3.0.20-Debian))</elem>
+                    <elem key="Users">1</elem>
+                    <elem key="Max Users">&lt;unlimited&gt;</elem>
+                    <elem key="Path">C:\tmp</elem>
+                    <elem key="Anonymous access">READ/WRITE</elem>
+                </table>
+                <table key="\\192.168.19.134\opt">
+                    <elem key="Type">STYPE_DISKTREE</elem>
+                    <elem key="Comment"></elem>
+                    <elem key="Users">1</elem>
+                    <elem key="Max Users">&lt;unlimited&gt;</elem>
+                    <elem key="Path">C:\tmp</elem>
+                    <elem key="Anonymous access">&lt;none&gt;</elem>
+                </table>
+                <table key="\\192.168.19.134\print$">
+                    <elem key="Type">STYPE_DISKTREE</elem>
+                    <elem key="Comment">Printer Drivers</elem>
+                    <elem key="Users">1</elem>
+                    <elem key="Max Users">&lt;unlimited&gt;</elem>
+                    <elem key="Path">C:\var\lib\samba\printers</elem>
+                    <elem key="Anonymous access">&lt;none&gt;</elem>
+                </table>
+                <table key="\\192.168.19.134\tmp">
+                    <elem key="Type">STYPE_DISKTREE</elem>
+                    <elem key="Comment">oh noes!</elem>
+                    <elem key="Users">1</elem>
+                    <elem key="Max Users">&lt;unlimited&gt;</elem>
+                    <elem key="Path">C:\tmp</elem>
+                    <elem key="Anonymous access">READ/WRITE</elem>
+                </table>
+            </script><script id="smb-enum-users" output="&#xa;  METASPLOITABLE\backup (RID: 1068)&#xa;    Full name:   backup&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\bin (RID: 1004)&#xa;    Full name:   bin&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\bind (RID: 1210)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\daemon (RID: 1002)&#xa;    Full name:   daemon&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\dhcp (RID: 1202)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\distccd (RID: 1222)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\ftp (RID: 1214)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\games (RID: 1010)&#xa;    Full name:   games&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\gnats (RID: 1082)&#xa;    Full name:   Gnats Bug-Reporting System (admin)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\irc (RID: 1078)&#xa;    Full name:   ircd&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\klog (RID: 1206)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\libuuid (RID: 1200)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\list (RID: 1076)&#xa;    Full name:   Mailing List Manager&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\lp (RID: 1014)&#xa;    Full name:   lp&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\mail (RID: 1016)&#xa;    Full name:   mail&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\man (RID: 1012)&#xa;    Full name:   man&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\msfadmin (RID: 3000)&#xa;    Full name:   msfadmin,,,&#xa;    Flags:       Normal user account&#xa;  METASPLOITABLE\mysql (RID: 1218)&#xa;    Full name:   MySQL Server,,,&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\news (RID: 1018)&#xa;    Full name:   news&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\nobody (RID: 501)&#xa;    Full name:   nobody&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\postfix (RID: 1212)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\postgres (RID: 1216)&#xa;    Full name:   PostgreSQL administrator,,,&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\proftpd (RID: 1226)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\proxy (RID: 1026)&#xa;    Full name:   proxy&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\root (RID: 1000)&#xa;    Full name:   root&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\service (RID: 3004)&#xa;    Full name:   ,,,&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\sshd (RID: 1208)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\sync (RID: 1008)&#xa;    Full name:   sync&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\sys (RID: 1006)&#xa;    Full name:   sys&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\syslog (RID: 1204)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\telnetd (RID: 1224)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\tomcat55 (RID: 1220)&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\user (RID: 3002)&#xa;    Full name:   just a user,111,,&#xa;    Flags:       Normal user account&#xa;  METASPLOITABLE\uucp (RID: 1020)&#xa;    Full name:   uucp&#xa;    Flags:       Account disabled, Normal user account&#xa;  METASPLOITABLE\www-data (RID: 1066)&#xa;    Full name:   www-data&#xa;    Flags:       Account disabled, Normal user account&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.20-Debian)&#xa;  Computer name: metasploitable&#xa;  NetBIOS computer name: &#xa;  Domain name: localdomain&#xa;  FQDN: metasploitable.localdomain&#xa;  System time: 2025-07-15T09:20:48-04:00&#xa;"><elem key="os">Unix</elem>
+                <elem key="lanmanager">Samba 3.0.20-Debian</elem>
+                <elem key="server"></elem>
+                <elem key="date">2025-07-15T09:20:48-04:00</elem>
+                <elem key="fqdn">metasploitable.localdomain</elem>
+                <elem key="domain_dns">localdomain</elem>
+                <elem key="workgroup">WORKGROUP\x00</elem>
+            </script></hostscript><trace>
+            <hop ttl="1" ipaddr="192.168.19.134" rtt="0.32"/>
+        </trace>
+        <times srtt="323" rttvar="79" to="100000"/>
+    </host>
+    <host starttime="1752734088" endtime="1752734346"><status state="up" reason="arp-response" reason_ttl="0"/>
+        <address addr="192.168.19.254" addrtype="ipv4"/>
+        <address addr="00:50:56:E7:E4:99" addrtype="mac" vendor="VMware"/>
+        <hostnames>
+        </hostnames>
+        <ports><extraports state="filtered" count="65535">
+                <extrareasons reason="no-response" count="65535" proto="tcp" ports="1-65535"/>
+            </extraports>
+        </ports>
+        <os></os>
+        <distance value="1"/>
+        <trace>
+            <hop ttl="1" ipaddr="192.168.19.254" rtt="0.10"/>
+        </trace>
+        <times srtt="105" rttvar="2136" to="100000"/>
+    </host>
+    <host starttime="1752734356" endtime="1752734372"><status state="up" reason="localhost-response" reason_ttl="0"/>
+        <address addr="192.168.19.133" addrtype="ipv4"/>
+        <hostnames>
+        </hostnames>
+        <ports><extraports state="closed" count="65533">
+                <extrareasons reason="reset" count="65533" proto="tcp" ports="1-21,23-8079,8081-65535"/>
+            </extraports>
+            <port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 5" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+            <port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tornado httpd" version="6.5.1" method="probed" conf="10"><cpe>cpe:/a:tornadoweb:tornado:6.5.1</cpe></service><script id="http-headers" output="&#xa;  Server: TornadoServer/6.5.1&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  Date: Thu, 17 Jul 2025 06:39:31 GMT&#xa;  X-Content-Type-Options: nosniff&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;; report-uri /api/security/csp-report&#xa;  Etag: &quot;2c8a2204d345855c3f7dab0ce617b12f7c2bd50b&quot;&#xa;  Content-Length: 3688&#xa;  Set-Cookie: _xsrf=2|08e5d959|80735e2d5b54cd40ab5800c5dcc6f2e2|1752734371; Path=/&#xa;  Connection: close&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-methods" output="&#xa;  Supported Methods: GET POST"><table key="Supported Methods">
+                        <elem>GET</elem>
+                        <elem>POST</elem>
+                    </table>
+                </script><script id="http-title" output="Jupyter Server&#xa;Requested resource was /login?next=%2Flab%3F"><elem key="title">Jupyter Server</elem>
+                    <elem key="redirect_url">/login?next=%2Flab%3F</elem>
+                </script><script id="http-server-header" output="TornadoServer/6.5.1"><elem>TornadoServer/6.5.1</elem>
+                </script></port>
+        </ports>
+        <os><portused state="open" proto="tcp" portid="22"/>
+            <portused state="closed" proto="tcp" portid="1"/>
+            <portused state="closed" proto="udp" portid="38831"/>
+            <osmatch name="Linux 2.6.32" accuracy="100" line="59030">
+                <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+            </osmatch>
+            <osmatch name="Linux 5.0 - 6.2" accuracy="100" line="71749">
+                <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+                <osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:6</cpe></osclass>
+            </osmatch>
+        </os>
+        <uptime seconds="1710072" lastboot="Fri Jun 27 07:38:20 2025"/>
+        <distance value="0"/>
+        <tcpsequence index="263" difficulty="Good luck!" values="66C64B0C,EF1F98B2,FA1492A8,97AF946B,A3C18D2,D51A0229"/>
+        <ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+        <tcptssequence class="1000HZ" values="65ED989C,65ED9900,65ED9965,65ED99C9,65ED9A2D,65ED9A91"/>
+        <times srtt="57" rttvar="12" to="100000"/>
+    </host>
+    <runstats><finished time="1752734372" timestr="Thu Jul 17 02:39:32 2025" summary="Nmap done at Thu Jul 17 02:39:32 2025; 256 IP addresses (5 hosts up) scanned in 286.86 seconds" elapsed="286.86" exit="success"/><hosts up="5" down="251" total="256"/>
+    </runstats>
 </nmaprun>
