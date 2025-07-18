@@ -1,9 +1,10 @@
 from lxml import etree
 
 def xml_to_list_Fast():
-        xml=etree.parse('MCP/result.xml')
+        xml=etree.parse('result.xml')
         host=xml.xpath('//nmaprun/host')
         ip_list=[]
+        result_list=[]
         # print(host)
         for host in host:
             # print(host)
@@ -17,8 +18,10 @@ def xml_to_list_Fast():
                     muban={'port':port,'service':service,'port_state':port_state}
                     # muban={,'ip_info':muban}
                     ip_list.append(muban)
-            a={port_ip:ip_list}
-        return a
+                    # print(muban)
+            result_list.append({port_ip:ip_list})
+            # print(list_end)
+        return result_list
 def xml_to_list_Full():
     xml=etree.parse('MCP/result.xml')
     host=xml.xpath('//nmaprun/host')
@@ -52,9 +55,11 @@ def xml_to_list_Full():
                 
                 # muban={,'ip_info':muban}
                 ip_list.append(muban)
-        list_end=result_list.append({port_ip:ip_list})
+        result_list.append({port_ip:ip_list})
         # a=ip_list
         #print(a)
         # result_list.append(a)
         #print(a)
     return result_list
+
+print(xml_to_list_Fast())

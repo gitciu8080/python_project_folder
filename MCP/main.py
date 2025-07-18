@@ -1,6 +1,7 @@
 from mcp.server.fastmcp import FastMCP
-import Scanner.scan as scan
-import Scanner.Get_Net_Card as Get_Net_Card
+import scan as scan
+import Get_Net_Card as Get_Net_Card
+import Hydra_MCP as Hydra
 import logging
 import os
 
@@ -20,11 +21,20 @@ def create_mcp_server():
     mcp = FastMCP(SERVER_NAME)
 
     tools_to_add = {
-        scan.Fast_Scan: "Perform a fast scan on the specified network card",
-        scan.Full_Scan: "Perform a full scan on the specified network card",
-        scan.Advance_Scan: "Perform an advanced scan with custom Nmap tools",
-        Get_Net_Card.get_Network_Cards: "Get network card information list",
-        Get_Net_Card.format_ip_card_name: "Format the IP address of a network card by its name (ethX)",
+        scan.Fast_Scan: "快速扫描指定网卡",
+        scan.Full_Scan: "全端口扫描指定网卡",
+        scan.Advance_Scan: "高级扫描指定网卡",
+        Get_Net_Card.get_Network_Cards: "获取所有网卡信息",
+        Get_Net_Card.format_ip_card_name: "格式化指定网卡的IP+CIDR地址",
+        Hydra.hydra_ssh: "执行SSH爆破",
+        Hydra.hydra_ftp: "执行FTP爆破",
+        Hydra.hydra_mysql: "执行MySQL爆破",       
+        Hydra.hydra_postgre: "执行PostgreSQL爆破",
+        Hydra.hydra_samba: "执行Samba爆破",
+        Hydra.hydra_smtp: "执行SMTP爆破",
+        Hydra.hydra_telnet: "执行Telnet爆破",
+        Hydra.hydra_vnc: "执行VNC爆破",
+
     }
 
     for tool_func, description in tools_to_add.items():

@@ -1,8 +1,5 @@
 import subprocess
-import Scanner.Get_Net_Card as Get_Net_Card
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'XML_to_JSON')))
+import Get_Net_Card
 import xml_to_json
 def Fast_Scan(Card_name)->dict:
     ip=Get_Net_Card.format_ip_card_name(Card_name)
@@ -25,3 +22,4 @@ def Advance_Scan(Card_name,shell:list[str] = None)->str:
     result=subprocess.run(shell,capture_output=True,text=True)
     return result.stdout
 
+print(Fast_Scan('eth0'))
