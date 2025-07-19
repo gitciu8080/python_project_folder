@@ -3,10 +3,11 @@ from lxml import etree
 def xml_to_list_Fast():
         xml=etree.parse('result.xml')
         host=xml.xpath('//nmaprun/host')
-        ip_list=[]
+        # ip_list=[]
         result_list=[]
         # print(host)
         for host in host:
+            ip_list=[]
             # print(host)
             port_ip=host.xpath('address[@addrtype="ipv4"]/@addr')[0]
             port_state=host.xpath('ports/port/state/@state')
@@ -23,12 +24,13 @@ def xml_to_list_Fast():
             # print(list_end)
         return result_list
 def xml_to_list_Full():
-    xml=etree.parse('MCP/result.xml')
+    xml=etree.parse('result.xml')
     host=xml.xpath('//nmaprun/host')
-    ip_list=[]
+    
     result_list=[]
     # print(host)
     for host in host:
+        ip_list=[]
         # print(host)
         
         port_ip=host.xpath('address[@addrtype="ipv4"]/@addr')[0]
@@ -62,4 +64,4 @@ def xml_to_list_Full():
         #print(a)
     return result_list
 
-print(xml_to_list_Fast())
+# print(xml_to_list_Fast())

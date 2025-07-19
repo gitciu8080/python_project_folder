@@ -40,4 +40,7 @@ def hydra_smtp(ip, port, user:list[str] = None, passwd:list[str] = None)->dict:
     hydra_instance = Hydra.Hydra(ip, port, user, passwd)
     return hydra_instance.hydra_smtp()
 
-# print(hydra_ftp('192.168.19.134',21,['admin','1234','msfadmin'],['admin','1234','msfadmin']))
+def hydra(ip, port,shell)->dict:
+
+
+print(hydra_ftp('192.168.19.134',21,['admin','1234','msfadmin'],['admin','1234','msfadmin']))

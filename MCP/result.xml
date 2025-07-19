@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE nmaprun>
 <?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 7.95 scan initiated Fri Jul 18 00:53:24 2025 as: /usr/lib/nmap/nmap -&#45;privileged -sS -T5 -p 21,22,25,53,80,135,139,443,445,3306,3389,8080 -sV -&#45;version-intensity 2 -&#45;min-parallelism 100 -&#45;open -oX MCP/result.xml 192.168.19.0/24 -->
-<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -sS -T5 -p 21,22,25,53,80,135,139,443,445,3306,3389,8080 -sV -&#45;version-intensity 2 -&#45;min-parallelism 100 -&#45;open -oX MCP/result.xml 192.168.19.0/24" start="1752814404" startstr="Fri Jul 18 00:53:24 2025" version="7.95" xmloutputversion="1.05">
+<!-- Nmap 7.95 scan initiated Fri Jul 18 14:09:58 2025 as: /usr/lib/nmap/nmap -&#45;privileged -sS -T5 -p 21,22,25,53,80,135,139,443,445,3306,3389,8080 -sV -&#45;version-intensity 2 -&#45;min-parallelism 100 -&#45;open -oX result.xml 192.168.146.0/24 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -sS -T5 -p 21,22,25,53,80,135,139,443,445,3306,3389,8080 -sV -&#45;version-intensity 2 -&#45;min-parallelism 100 -&#45;open -oX result.xml 192.168.146.0/24" start="1752862198" startstr="Fri Jul 18 14:09:58 2025" version="7.95" xmloutputversion="1.05">
 <scaninfo type="syn" protocol="tcp" numservices="12" services="21-22,25,53,80,135,139,443,445,3306,3389,8080"/>
 <verbose level="0"/>
 <debugging level="0"/>
 <hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.2" addrtype="ipv4"/>
-<address addr="00:50:56:EA:FB:41" addrtype="mac" vendor="VMware"/>
+<address addr="192.168.146.2" addrtype="ipv4"/>
+<address addr="00:50:56:FE:E1:40" addrtype="mac" vendor="VMware"/>
 <hostnames>
 </hostnames>
 </hosthint>
 <hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.1" addrtype="ipv4"/>
+<address addr="192.168.146.1" addrtype="ipv4"/>
 <address addr="00:50:56:C0:00:08" addrtype="mac" vendor="VMware"/>
 <hostnames>
 </hostnames>
 </hosthint>
 <hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.134" addrtype="ipv4"/>
+<address addr="192.168.146.129" addrtype="ipv4"/>
 <address addr="00:0C:29:4B:01:59" addrtype="mac" vendor="VMware"/>
 <hostnames>
 </hostnames>
 </hosthint>
 <hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.254" addrtype="ipv4"/>
-<address addr="00:50:56:E7:E4:99" addrtype="mac" vendor="VMware"/>
+<address addr="192.168.146.254" addrtype="ipv4"/>
+<address addr="00:50:56:F4:64:9E" addrtype="mac" vendor="VMware"/>
 <hostnames>
 </hostnames>
 </hosthint>
-<host starttime="1752814405" endtime="1752814423"><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.1" addrtype="ipv4"/>
+<host starttime="1752862200" endtime="1752862212"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.146.1" addrtype="ipv4"/>
 <address addr="00:50:56:C0:00:08" addrtype="mac" vendor="VMware"/>
 <hostnames>
+<hostname name="192.168.146.1" type="PTR"/>
 </hostnames>
 <ports><extraports state="filtered" count="9">
 <extrareasons reason="no-response" count="9" proto="tcp" ports="21-22,25,53,80,443,3306,3389,8080"/>
@@ -42,24 +43,13 @@
 <port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
 <port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
 </ports>
-<times srtt="7058" rttvar="7187" to="50000"/>
+<times srtt="529" rttvar="2290" to="50000"/>
 </host>
-<host starttime="1752814405" endtime="1752814423"><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.2" addrtype="ipv4"/>
-<address addr="00:50:56:EA:FB:41" addrtype="mac" vendor="VMware"/>
-<hostnames>
-</hostnames>
-<ports><extraports state="closed" count="11">
-<extrareasons reason="reset" count="11" proto="tcp" ports="21-22,25,80,135,139,443,445,3306,3389,8080"/>
-</extraports>
-<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="domain" extrainfo="unknown banner: Why query me?Your IP had been logged!" method="probed" conf="10"/></port>
-</ports>
-<times srtt="280" rttvar="607" to="50000"/>
-</host>
-<host starttime="1752814405" endtime="1752814423"><status state="up" reason="arp-response" reason_ttl="0"/>
-<address addr="192.168.19.134" addrtype="ipv4"/>
+<host starttime="1752862200" endtime="1752862212"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.146.129" addrtype="ipv4"/>
 <address addr="00:0C:29:4B:01:59" addrtype="mac" vendor="VMware"/>
 <hostnames>
+<hostname name="192.168.146.129" type="PTR"/>
 </hostnames>
 <ports><extraports state="closed" count="4">
 <extrareasons reason="reset" count="4" proto="tcp" ports="135,443,3389,8080"/>
@@ -71,13 +61,14 @@
 <port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.8" extrainfo="(Ubuntu) DAV/2" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.8</cpe></service></port>
 <port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
 <port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
-<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" version="5.0.51a-3ubuntu5" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.0.51a-3ubuntu5</cpe></service></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" extrainfo="blocked - too many connection errors" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql</cpe></service></port>
 </ports>
-<times srtt="154" rttvar="178" to="50000"/>
+<times srtt="135" rttvar="200" to="50000"/>
 </host>
-<host starttime="1752814423" endtime="1752814429"><status state="up" reason="localhost-response" reason_ttl="0"/>
-<address addr="192.168.19.133" addrtype="ipv4"/>
+<host starttime="1752862212" endtime="1752862218"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="192.168.146.128" addrtype="ipv4"/>
 <hostnames>
+<hostname name="192.168.146.128" type="PTR"/>
 </hostnames>
 <ports><extraports state="closed" count="10">
 <extrareasons reason="reset" count="10" proto="tcp" ports="21,25,53,80,135,139,443,445,3306,3389"/>
@@ -85,8 +76,8 @@
 <port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 5" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
 <port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tornado httpd" version="6.5.1" method="probed" conf="10"><cpe>cpe:/a:tornadoweb:tornado:6.5.1</cpe></service></port>
 </ports>
-<times srtt="26" rttvar="220" to="50000"/>
+<times srtt="12" rttvar="226" to="50000"/>
 </host>
-<runstats><finished time="1752814429" timestr="Fri Jul 18 00:53:49 2025" summary="Nmap done at Fri Jul 18 00:53:49 2025; 256 IP addresses (5 hosts up) scanned in 24.90 seconds" elapsed="24.90" exit="success"/><hosts up="5" down="251" total="256"/>
+<runstats><finished time="1752862218" timestr="Fri Jul 18 14:10:18 2025" summary="Nmap done at Fri Jul 18 14:10:18 2025; 256 IP addresses (5 hosts up) scanned in 19.64 seconds" elapsed="19.64" exit="success"/><hosts up="5" down="251" total="256"/>
 </runstats>
 </nmaprun>

@@ -23,6 +23,8 @@ def create_mcp_server():
     tools_to_add = {
         scan.Fast_Scan: "快速扫描指定网卡",
         scan.Full_Scan: "全端口扫描指定网卡",
+        scan.Fast_Scan_ip: "快速扫描指定IP",
+        scan.Full_Scan_with_ip: "全端口扫描指定IP",
         scan.Advance_Scan: "高级扫描指定网卡",
         Get_Net_Card.get_Network_Cards: "获取所有网卡信息",
         Get_Net_Card.format_ip_card_name: "格式化指定网卡的IP+CIDR地址",
